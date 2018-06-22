@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<Pane fx:id="contactsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="434.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane layoutX="17.0" layoutY="45.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="客户编号" />
+            <TextField fx:id="c_id" editable="false" GridPane.columnIndex="1" />
+            <Label text="客户名称" GridPane.columnIndex="2" />
+            <TextField fx:id="c_name" editable="false" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="contactTable" layoutX="6.0" layoutY="101.0" prefHeight="242.0" prefWidth="423.0">
+        <columns>
+            <TableColumn prefWidth="51.0" text="编号" />
+          <TableColumn prefWidth="57.0" text="姓名" />
+          <TableColumn prefWidth="65.0" text="性别" />
+            <TableColumn prefWidth="67.0" text="职位" />
+            <TableColumn prefWidth="104.0" text="电话" />
+            <TableColumn prefWidth="106.0" text="操作" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

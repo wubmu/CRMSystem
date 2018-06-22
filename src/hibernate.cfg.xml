@@ -12,5 +12,6 @@
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
         <mapping class="sample.Bean.CustomerEntity"/>
+        <mapping class="sample.Bean.Contact"></mapping>
     </session-factory>
 </hibernate-configuration>

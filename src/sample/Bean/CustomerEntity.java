@@ -17,9 +17,9 @@ public class CustomerEntity {
     private String area;
     private String name;
     private String degree;
-    private Integer satisfaction;
+    private String satisfaction;
     private String accountManager;
-    private Integer credit;
+    private String credit;
 
     @Id
     @Column(name = "id")
@@ -63,11 +63,11 @@ public class CustomerEntity {
 
     @Basic
     @Column(name = "satisfaction")
-    public Integer getSatisfaction() {
+    public String getSatisfaction() {
         return satisfaction;
     }
 
-    public void setSatisfaction(Integer satisfaction) {
+    public void setSatisfaction(String satisfaction) {
         this.satisfaction = satisfaction;
     }
 
@@ -83,11 +83,11 @@ public class CustomerEntity {
 
     @Basic
     @Column(name = "credit")
-    public Integer getCredit() {
+    public String getCredit() {
         return credit;
     }
 
-    public void setCredit(Integer credit) {
+    public void setCredit(String credit) {
         this.credit = credit;
     }
 

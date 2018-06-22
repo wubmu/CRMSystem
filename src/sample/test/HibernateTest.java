@@ -7,6 +7,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import sample.Bean.Customer;
 import sample.Bean.CustomerEntity;
+import sample.dao.hibernateFactory;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,21 +18,6 @@ import sample.Bean.CustomerEntity;
  */
 public class HibernateTest {
     public static void main(String[] args) {
-        try {
-            SessionFactory sf =
-                    new Configuration().configure().buildSessionFactory();
-            Session session = sf.openSession();
-            Transaction tx = session.beginTransaction();
-            CustomerEntity customer = new CustomerEntity();
-            customer.setArea("12323");
-            session.save(customer);
-
-
-            tx.commit();
-            session.close();
-
-        } catch (HibernateException e) {
-            e.printStackTrace();
-        }
+        System.out.println(hibernateFactory.getSession());
     }
 }
